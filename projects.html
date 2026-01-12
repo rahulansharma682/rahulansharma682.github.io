@@ -32,6 +32,31 @@
         <h2 class="section-title">🚀 Projects</h2>
         <div class="projects-container">
             <div class="project-card">
+    <div class="project-header">
+        <h3>FitLog – Serverless Gym Tracker</h3>
+    </div>
+    <p class="project-description">
+        A cloud-native, serverless workout tracking application designed to log workouts, trigger notifications, and operate with zero server management using AWS infrastructure-as-code.
+    </p>
+    <div class="project-tech">
+        <span class="tech-tag">AWS</span>
+        <span class="tech-tag">Serverless</span>
+        <span class="tech-tag">AWS CDK</span>
+        <span class="tech-tag">Lambda</span>
+        <span class="tech-tag">S3</span>
+        <span class="tech-tag">SNS</span>
+        <span class="tech-tag">Route53</span>
+        <span class="tech-tag">CloudWatch</span>
+    </div>
+    <ul class="project-features">
+        <li>Designed and deployed a fully serverless workout tracking system using AWS CDK, integrating S3 for static frontend hosting and data storage, Lambda for backend APIs, SNS for notifications, Route53 for DNS, and IAM for secure access control</li>
+        <li>Implemented a low-latency HTTPS backend using Lambda Function URLs, reducing deployment time to 5–10 minutes compared to 30–45 minutes with CloudFront-based setups, while supporting CORS and custom domain routing</li>
+        <li>Built an event-driven notification pipeline using SNS to trigger workout email alerts, enabling 100% asynchronous processing and eliminating the need for persistent backend services</li>
+        <li>Configured automatic CloudWatch logging and monitoring for all backend operations, achieving full request traceability and simplifying debugging without additional observability tooling</li>
+        <li>Applied least-privilege IAM policies and infrastructure-as-code best practices, reducing manual configuration effort by ~80% and ensuring reproducible, secure deployments</li>
+    </ul>
+</div>      
+            <div class="project-card">
                 <div class="project-header">
                     <h3>Virtual Machine Migration Optimizer for Cloud Resource Efficiency</h3>
                 </div>
@@ -139,5 +164,6 @@
     <script src="script.js"></script>
 </body>
 </html> 
+
 
 
