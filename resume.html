@@ -4,98 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Rahul Chemitiganti</title>
+    <meta name="description" content="Curriculum Vitae / Resume of Rahul Chemitiganti. PDF viewer and fast direct download.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .resume-container {
-            width: 100%;
-            height: 90vh;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .resume-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .download-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #2c3e50;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 1.1rem;
-            z-index: 1000;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: #34495e;
-        }
-
-        .download-btn i {
-            font-size: 1.3rem;
-        }
-
-        @media (max-width: 768px) {
-            .download-btn {
-                bottom: 20px;
-                right: 20px;
-                padding: 12px 24px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Glowing background blobs -->
+    <div class="bg-glowing-spots"></div>
+
+    <!-- Navigation Header -->
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">Rahul Chemitiganti</div>
-            <ul class="nav-links">
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="education.html">🎓 Education</a></li>
-                <li><a href="experience.html">💼 Experience</a></li>
-                <li><a href="projects.html">🚀 Projects</a></li>
-                <li><a href="publications.html">📚 Publications</a></li>
-                <li><a href="contact.html">📧 Contact</a></li>
-            </ul>
-            <div class="resume-btn">
-                <a href="resume.html" class="btn active">Resume</a>
+            <a href="index.html" class="logo">Rahul Chemitiganti</a>
+            <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                    <li><a href="publications.html"><i class="fas fa-book"></i> Publications</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <a href="resume.html" class="btn btn-secondary active" style="padding: 0.45rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.85rem;">Resume</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Resume Section -->
-    <section class="section">
-        <div class="resume-container">
-            <iframe src="RahulChemitiganti.pdf" class="resume-iframe" title="Resume"></iframe>
+    <section class="section container" style="padding-top: 7rem; min-height: calc(100vh - 60px);">
+        <div style="width: 100%;">
+            <div class="resume-frame-card glass-card fade-in">
+                <!-- Mock status window toolbar -->
+                <div class="resume-toolbar">
+                    <div class="resume-toolbar-controls">
+                        <div class="window-dot red"></div>
+                        <div class="window-dot yellow"></div>
+                        <div class="window-dot green"></div>
+                    </div>
+                    <div class="resume-toolbar-title">
+                        <i class="far fa-file-pdf" style="color: #ef4444;"></i> RahulChemitiganti.pdf
+                    </div>
+                    <div><!-- Empty placeholder for alignment --></div>
+                </div>
+                
+                <!-- PDF iframe frame -->
+                <iframe src="RahulChemitiganti.pdf" class="resume-iframe" title="Rahul Chemitiganti Resume"></iframe>
+            </div>
         </div>
-        <a href="RahulChemitiganti.pdf" download class="download-btn">
-            <i class="fas fa-download"></i>
-            Download Resume
+
+        <!-- Pulsing Float Download Button -->
+        <a href="RahulChemitiganti.pdf" download="RahulChemitiganti.pdf" class="download-btn-pulse fade-in delay-200">
+            <i class="fas fa-download"></i> Download Resume
+            <div class="pulse-ring"></div>
         </a>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Rahul Chemitiganti. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-socials">
+                <a href="https://github.com/rahulansharma682" target="_blank" class="footer-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/chrahulansharma/" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:chrahulansharma@gmail.com" class="footer-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 Rahul Chemitiganti. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

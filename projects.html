@@ -4,171 +4,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Rahul Chemitiganti</title>
+    <meta name="description" content="Innovative software projects developed by Rahul Chemitiganti, including AI models, serverless architectures, compilers, and cloud optimizers.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Glowing background blobs -->
+    <div class="bg-glowing-spots"></div>
+
+    <!-- Navigation Header -->
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">Rahul Chemitiganti</div>
-            <ul class="nav-links">
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="education.html">🎓 Education</a></li>
-                <li><a href="experience.html">💼 Experience</a></li>
-                <li><a href="projects.html" class="active">🚀 Projects</a></li>
-                <li><a href="publications.html">📚 Publications</a></li>
-                <li><a href="contact.html">📧 Contact</a></li>
-            </ul>
-            <div class="resume-btn">
-                <a href="resume.html" class="btn">Resume</a>
+            <a href="index.html" class="logo">Rahul Chemitiganti</a>
+            <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="projects.html" class="active"><i class="fas fa-code"></i> Projects</a></li>
+                    <li><a href="publications.html"><i class="fas fa-book"></i> Publications</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <a href="resume.html" class="btn btn-secondary" style="padding: 0.45rem 1rem; border-radius: var(--border-radius-sm); font-size: 0.85rem;">Resume</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">🚀 Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>FitLog – Serverless Gym Tracker</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/rahulansharma682/fitlog-cloud-computing" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
+    <section id="projects" class="section container">
+        <div style="width: 100%;">
+            <h2 class="section-title">🚀 Projects</h2>
+            
+            <!-- Search & Filter Controls -->
+            <div class="projects-header-controls fade-in">
+                <div class="search-box-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="project-search" class="search-input" placeholder="Search by name, tech stack, or feature...">
                 </div>
-                <p class="project-description">
-                    A cloud-native, serverless workout tracking application designed to log workouts, trigger notifications, and operate with zero server management using AWS infrastructure-as-code.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">AWS</span>
-                    <span class="tech-tag">Serverless</span>
-                    <span class="tech-tag">AWS CDK</span>
-                    <span class="tech-tag">Lambda</span>
-                    <span class="tech-tag">S3</span>
-                    <span class="tech-tag">SNS</span>
-                    <span class="tech-tag">Route53</span>
-                    <span class="tech-tag">CloudWatch</span>
+                <div class="filter-tags-wrapper">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud &amp; Serverless</button>
+                    <button class="filter-btn" data-filter="systems">Systems &amp; Compilers</button>
                 </div>
-                <ul class="project-features"> 
-                    <li>Designed and deployed a fully serverless workout tracking system using AWS CDK, integrating S3 for static frontend hosting and data storage, Lambda for backend APIs, SNS for notifications, Route53 for DNS, and IAM for secure access control</li>
-                    <li>Implemented a low-latency HTTPS backend using Lambda Function URLs, reducing deployment time to 5–10 minutes compared to 30–45 minutes with CloudFront-based setups, while supporting CORS and custom domain routing</li>
-                    <li>Built an event-driven notification pipeline using SNS to trigger workout email alerts, enabling 100% asynchronous processing and eliminating the need for persistent backend services</li>
-                    <li>Configured automatic CloudWatch logging and monitoring for all backend operations, achieving full request traceability and simplifying debugging without additional observability tooling</li>
-                    <li>Applied least-privilege IAM policies and infrastructure-as-code best practices, reducing manual configuration effort by ~80% and ensuring reproducible, secure deployments</li>
-                </ul>
-            </div>
-  
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Virtual Machine Migration Optimizer for Cloud Resource Efficiency</h3>
-                </div>
-                <p class="project-description">
-                    A cloud resource optimization solution that improves container consolidation efficiency through custom VM migration algorithms and workload simulation.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Cloud Computing</span>
-                    <span class="tech-tag">Virtualization</span>
-                    <span class="tech-tag">Resource Optimization</span>
-                    <span class="tech-tag">CloudSim</span>
-                    <span class="tech-tag">PlanetLab</span>
-                </div>
-                <ul class="project-features">
-                    <li>Devised a custom Virtual Machine migration algorithm for energy-efficient container management</li>
-                    <li>Simulated real-world cloud workloads using CloudSim and the PlanetLab dataset, processing over 10,000 Virtual Machine migrations per threshold setting</li>
-                    <li>Benchmarked the proposed algorithm against Maximum-Correlation and Minimum Migration Time algorithms, showing a 20–30% reduction in Virtual Machine migrations and 10% fewer Service Level Agreement violations</li>
-                    <li>Optimized Virtual Machine migration using CPU and memory utilization parameters, reducing Virtual Machine shutdowns by 15%, improving cloud resource efficiency</li>
-                </ul>
             </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Accent Detection in Indian Languages through CNN based Spectrogram Analysis</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/rahulansharma682/Indian_Accent_Classifier" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://indian-accent-classifier.streamlit.app/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- FitLog -->
+                <div class="project-card glass-card" data-category="cloud">
+                    <div class="project-card-header">
+                        <h3>FitLog – Serverless Gym Tracker</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rahulansharma682/fitlog-cloud-computing" target="_blank" class="project-icon-link" aria-label="GitHub Repository">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
+                    <p class="project-card-desc">
+                        A high-performance, cloud-native, serverless workout tracking application designed to log schedules, automate email notifications, and scale instantly with zero server management overhead using AWS.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tag">AWS CDK</span>
+                        <span class="tag">AWS Lambda</span>
+                        <span class="tag">Amazon S3</span>
+                        <span class="tag">Amazon SNS</span>
+                        <span class="tag">Route53</span>
+                        <span class="tag">Serverless</span>
+                    </div>
+                    <ul class="project-features-list">
+                        <li>Designed a fully serverless workout system using AWS CDK, integrating S3 for static hosting and Lambda for high-availability backend APIs.</li>
+                        <li>Configured Lambda Function URLs directly, reducing cold start intervals and saving ~80% deployment times compared to CloudFront.</li>
+                        <li>Built an asynchronous, event-driven notification network using SNS to email custom updates based on user workout milestones.</li>
+                    </ul>
                 </div>
-                <p class="project-description">
-                    Implemented a deep learning model using Convolutional Neural Networks to detect and classify accents in Indian languages from audio spectrograms.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">CNN</span>
-                    <span class="tech-tag">Audio Processing</span>
-                </div>
-                <ul class="project-features">
-                    <li>Trained a deep learning model using CNNs for Indian accent classification, achieving 82% accuracy</li>
-                    <li>Curated and processed a novel dataset of around 7,000 1-minute audio samples from YouTube</li>
-                    <li>Utilized MFCC preprocessing, extracting 13 coefficients per frame to enhance feature extraction</li>
-                    <li>Applied LIME analysis to interpret model predictions, identifying top 10% most influential spectrogram regions affecting classification decisions</li>
-                </ul>
-            </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Multi-Language Code Recognizer using Custom Compiler</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/rahulansharma682/Compiler_Design" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://compilerdesign-recongising-language.streamlit.app/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                <!-- VM Migration -->
+                <div class="project-card glass-card" data-category="cloud">
+                    <div class="project-card-header">
+                        <h3>VM Migration Optimizer</h3>
+                        <div class="project-links">
+                            <!-- No Github link for this one -->
+                        </div>
                     </div>
+                    <p class="project-card-desc">
+                        An energy-efficient cloud resource optimization system designed to improve physical server consolidation ratios and minimize SLA violations using dynamic migration algorithms.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tag">CloudSim</span>
+                        <span class="tag">PlanetLab Dataset</span>
+                        <span class="tag">Resource Allocation</span>
+                        <span class="tag">Energy Consolidation</span>
+                        <span class="tag">Java</span>
+                    </div>
+                    <ul class="project-features-list">
+                        <li>Devised a custom heuristic algorithm for energy-aware container migration across virtualization hosts.</li>
+                        <li>Simulated over 10,000 active VM migrations under dynamic utilization thresholds using CloudSim and real-world PlanetLab traces.</li>
+                        <li>Benchmarked results to demonstrate a 20-30% reduction in overall migrations and 10% fewer SLA degradation incidences.</li>
+                    </ul>
                 </div>
-                <p class="project-description">
-                    A sophisticated compiler implementation that can identify and analyze multiple programming languages simultaneously, built using Python and PLY library.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">PLY</span>
-                    <span class="tech-tag">Compiler Design</span>
-                    <span class="tech-tag">Lexical Analysis</span>
-                </div>
-                <ul class="project-features">
-                    <li>Constructed a compiler for effectively identifying 4 different programming languages within a single input</li>
-                    <li>A lexer implemented using the PLY library that recognizes over 50 unique tokens in Python, C++, C, and Java</li>
-                    <li>Supports over 10 unique language constructs such as function definitions, variable declarations, loops etc.</li>
-                </ul>
-            </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Tweet Sentiment Classifier</h3>
-                    <div class="project-links">
-                        <a href="https://github.com/rahulansharma682/tweet-sentiment-classifier" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://tweet-sentiment-classifier.streamlit.app/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                <!-- Accent Detection -->
+                <div class="project-card glass-card" data-category="ai">
+                    <div class="project-card-header">
+                        <h3>Accent Detection in Indian Speech</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rahulansharma682/Indian_Accent_Classifier" target="_blank" class="project-icon-link" aria-label="GitHub Repository">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://indian-accent-classifier.streamlit.app/" target="_blank" class="project-icon-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
+                    <p class="project-card-desc">
+                        A deep learning system utilizing Convolutional Neural Networks and spectrogram analyses to classify regional accents in Indian languages from raw audio clips.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">CNNs</span>
+                        <span class="tag">Audio MFCCs</span>
+                        <span class="tag">LIME Explainer</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <ul class="project-features-list">
+                        <li>Trained 2D CNN classifiers on speech spectrograms, achieving an 82% multi-class accent classification accuracy.</li>
+                        <li>Curated and preprocessed a unique speech database consisting of 7,000 audio sequences from social channels.</li>
+                        <li>Applied LIME (Local Interpretable Model-agnostic Explanations) to segment and audit specific frequency bands dictating decisions.</li>
+                    </ul>
                 </div>
-                <p class="project-description">
-                    A production-ready sentiment analysis application that classifies tweet sentiments using a fine-tuned DistilBERT transformer model with an interactive Streamlit web interface.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">PyTorch</span>
-                    <span class="tech-tag">Transformers</span>
-                    <span class="tech-tag">DistilBERT</span>
-                    <span class="tech-tag">NLP</span>
-                    <span class="tech-tag">Streamlit</span>
+
+                <!-- Multi-Language Code Recognizer -->
+                <div class="project-card glass-card" data-category="systems">
+                    <div class="project-card-header">
+                        <h3>Multi-Language Code Recognizer</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rahulansharma682/Compiler_Design" target="_blank" class="project-icon-link" aria-label="GitHub Repository">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://compilerdesign-recongising-language.streamlit.app/" target="_blank" class="project-icon-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-card-desc">
+                        A sophisticated lexer and compiler utility capable of parsing and classifying code structures across multiple languages concurrently.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tag">Compiler Design</span>
+                        <span class="tag">PLY (Lex/Yacc)</span>
+                        <span class="tag">Lexical Analysis</span>
+                        <span class="tag">AST Generation</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <ul class="project-features-list">
+                        <li>Constructed parsing architectures targeting 4 languages (C, C++, Java, and Python) within single multi-file inputs.</li>
+                        <li>Engineered matching matrices using PLY, handling 50+ syntactic tokens and nested programmatic loops.</li>
+                        <li>Rendered real-time visual token trees and language distribution metrics in an interactive web application.</li>
+                    </ul>
                 </div>
-                <ul class="project-features">
-                    <li>Fine-tuned DistilBERT model on Sentiment140 dataset containing 1.6 million labeled tweets for binary sentiment classification</li>
-                    <li>Achieved 40% smaller model size and 60% faster inference compared to BERT-base while retaining 97% language understanding capability</li>
-                    <li>Developed interactive web application with real-time sentiment predictions and confidence scores using Streamlit framework</li>
-                    <li>Deployed production-ready model to Hugging Face Hub with automatic model loading and caching for optimized performance</li>
-                </ul>
+
+                <!-- Tweet Sentiment Classifier -->
+                <div class="project-card glass-card" data-category="ai">
+                    <div class="project-card-header">
+                        <h3>Tweet Sentiment Classifier</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rahulansharma682/tweet-sentiment-classifier" target="_blank" class="project-icon-link" aria-label="GitHub Repository">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://tweet-sentiment-classifier.streamlit.app/" target="_blank" class="project-icon-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-card-desc">
+                        A transformer-based NLP model fine-tuned for high-throughput sentiment classification of social media posts, deploying optimized model sizes.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">DistilBERT</span>
+                        <span class="tag">HuggingFace</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Streamlit</span>
+                    </div>
+                    <ul class="project-features-list">
+                        <li>Fine-tuned a robust DistilBERT architecture on the massive Sentiment140 corpus containing 1.6M tweets.</li>
+                        <li>Achieved a 40% reduction in weight footprints and a 60% increase in inference velocity compared to standard BERT.</li>
+                        <li>Created responsive caching scripts to store model loading processes, offering low-latency Streamlit executions.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Rahul Chemitiganti. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-socials">
+                <a href="https://github.com/rahulansharma682" target="_blank" class="footer-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/chrahulansharma/" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:chrahulansharma@gmail.com" class="footer-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 Rahul Chemitiganti. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
-
-
-
-
+</html>
